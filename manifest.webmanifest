@@ -1,0 +1,20 @@
+{
+  "name": "켐원 명함스캔",
+  "short_name": "켐원명함",
+  "description": "켐원 임직원 전용 명함 스캔 — 명함 사진과 정보는 이 휴대폰에만 저장됩니다.",
+  "lang": "ko",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F2F5FA",
+  "theme_color": "#001C54",
+  "icons": [
+    {
+      "src": "/icon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
