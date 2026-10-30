@@ -1,4 +1,12 @@
 (function () {
+  // 다른 사이트가 이 앱을 자기 화면 안에 몰래 넣어(iframe) 누르게 하는 공격 막기 — 맨 위 창이 아니면 보여 주지 않는다
+  if (window.top !== window.self) {
+    document.documentElement.style.display = 'none';
+    try {
+      window.top.location = window.self.location.href;
+    } catch (_) {}
+    return;
+  }
   var KEY = 'chemone-boot-reload';
   window.addEventListener('error', function (e) {
     var t = e.target;
