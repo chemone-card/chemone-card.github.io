@@ -25,5 +25,10 @@
     try {
       sessionStorage.removeItem(KEY);
     } catch (_) {}
+    // 시작 화면이 어떤 이유로 남아 있으면 10초 뒤 걷어 낸다 (보통은 앱이 첫 화면을 띄우며 지운다)
+    setTimeout(function () {
+      var s = document.getElementById('boot-splash');
+      if (s) s.remove();
+    }, 10000);
   });
 })();
